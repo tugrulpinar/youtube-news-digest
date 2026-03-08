@@ -46,7 +46,9 @@ jobs:
             -var="youtube_api_key=${{ secrets.YOUTUBE_API_KEY }}" \
             -var="youtube_channel_id=${{ secrets.YOUTUBE_CHANNEL_ID }}" \
             -var="email_address=${{ vars.EMAIL_ADDRESS }}" \
-            -var="image_tag=${{ github.sha }}"
+            -var="image_tag=${{ github.sha }}" \
+            -var="webshare_proxy_username=${{ secrets.WEBSHARE_PROXY_USERNAME }}" \
+            -var="webshare_proxy_password=${{ secrets.WEBSHARE_PROXY_PASSWORD }}"
 
       - name: Build and push Docker image
         env:
@@ -63,4 +65,6 @@ jobs:
             -var="youtube_api_key=${{ secrets.YOUTUBE_API_KEY }}" \
             -var="youtube_channel_id=${{ secrets.YOUTUBE_CHANNEL_ID }}" \
             -var="email_address=${{ vars.EMAIL_ADDRESS }}" \
-            -var="image_tag=${{ github.sha }}"
+            -var="image_tag=${{ github.sha }}" \
+            -var="webshare_proxy_username=${{ secrets.WEBSHARE_PROXY_USERNAME }}" \
+            -var="webshare_proxy_password=${{ secrets.WEBSHARE_PROXY_PASSWORD }}"

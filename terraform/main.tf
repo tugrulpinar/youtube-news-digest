@@ -98,8 +98,10 @@ resource "aws_lambda_function" "digest" {
       YOUTUBE_CHANNEL_ID   = var.youtube_channel_id
       SNS_TOPIC_ARN        = aws_sns_topic.digest.arn
       SSM_PARAM_LAST_VIDEO = "/youtube-digest/last-video-id"
-      BEDROCK_MODEL_ID     = var.bedrock_model_id
-      BEDROCK_REGION       = var.aws_region
+      BEDROCK_MODEL_ID         = var.bedrock_model_id
+      BEDROCK_REGION           = var.aws_region
+      WEBSHARE_PROXY_USERNAME  = var.webshare_proxy_username
+      WEBSHARE_PROXY_PASSWORD  = var.webshare_proxy_password
     }
   }
 }

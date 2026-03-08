@@ -32,6 +32,18 @@ variable "bedrock_model_id" {
   default     = "us.anthropic.claude-sonnet-4-5-20250929-v1:0"
 }
 
+variable "webshare_proxy_username" {
+  description = "Webshare proxy username for YouTube transcript fetching"
+  type        = string
+  sensitive   = true
+}
+
+variable "webshare_proxy_password" {
+  description = "Webshare proxy password for YouTube transcript fetching"
+  type        = string
+  sensitive   = true
+}
+
 variable "image_tag" {
   description = "Docker image tag for the Lambda container image"
   type        = string
