@@ -1,6 +1,12 @@
 terraform {
   required_version = ">= 1.0"
 
+  backend "s3" {
+    bucket = "youtube-digest-56dfg67jv"
+    key    = "youtube-digest/terraform.tfstate"
+    region = "us-east-1"
+  }
+
   required_providers {
     aws = {
       source  = "hashicorp/aws"
